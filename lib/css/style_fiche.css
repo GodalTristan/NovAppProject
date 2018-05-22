@@ -1,0 +1,326 @@
+* { 
+	
+	margin: 0; padding: 0;
+}
+body {
+	background: #000000 url(../../images/main-bg.gif) repeat-x;
+	color: #000;
+	font-family: tahoma, arial;
+	font-size: 13px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+* html body {
+}
+
+img {
+	border: 0px;
+}
+
+afficheMessage {
+	color:red;
+}
+
+a:link { 
+	color: #9D9D9B;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+	
+a:visited { 
+	color: #9D9D9B;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: underline;	
+}
+	
+a:hover, a:active { 
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#footer a:link { 
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-decoration: none;
+}
+	
+#footer a:visited { 
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-decoration: none;	
+}
+	
+#footer a:hover, #footer a:active { 
+	color: #000000;
+	font-size: 11px;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-decoration: underline;
+}
+
+#banner {
+	clear: both;
+	height: 326px;
+	width: 776px;
+}
+
+#container {
+	margin: 0px auto;
+	text-align: left;
+	width: 776px;
+}
+
+#content {
+	clear: both;
+	width: 776px;
+	background-color:white;;
+	background-repeat: repeat;
+}
+
+#footer {
+	background: url(../../images/footer-bg.gif) no-repeat;
+	clear: both;
+	color: #FFFFFF;
+	display: block;
+	font-size: 11px;
+	height: 108px;
+	padding-top: 20px;
+	text-align: center;
+	width: 776px;
+}
+
+#headlines {
+	background: #1F1F1F;
+	height: 199px;
+	padding: 10px;
+	width: 254px;
+}
+
+#left {
+	background: white;
+	float: left;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	width: 736px;
+	height: 450px;
+}
+
+#top {
+	background: #ffffff;
+	float: left;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	width: 735px;
+	height: 40px;
+	border-bottom:1px solid black;
+}
+
+#logo {
+	height: 72px;
+	width: 776px;
+}
+
+#nav {
+	clear: both;
+	display: block;
+	height: 43px;
+	width: 776px;
+	background-image: url(../../images/nav-bg.gif);
+	background-repeat: repeat-x;
+}
+#nav ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bolder;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	text-decoration: none;	
+}
+#nav ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	text-align:center;
+}
+
+.nlink, .nlinkend {
+	float:left;
+	width:auto;
+	list-style: none;
+	display:inline;
+	text-align:center;
+	padding-top: 15px;
+	padding-left: 17px;
+	padding-right: 17px;
+	height:28px;
+}
+.nlink{
+	background-image: url(../../images/nav-line.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.nlinkend {
+	background-image: none;
+}
+
+* html #right p {
+	margin-top: -5px;
+}
+
+#stats {
+	background: #494949;
+	padding: 10px;
+	width: 254px;
+}
+
+* html #stats {
+	height: 170px;
+}
+
+.date {
+	color: #827961;
+	font-weight: bold;
+}
+
+.flt-lft {
+	float: left;
+	margin-right: 20px;
+}
+
+.flt-rgt {
+	float: right;
+}
+
+.heading1 {
+	background: url(../../images/heading-bg-1.gif) no-repeat;
+	color: #909090;
+	display: block;
+	font-family: arial, tahoma;
+	font-size: 14px;
+	font-weight: bold;
+	height: 21px;
+	margin-bottom: 12px;
+	padding-left: 40px;
+	padding-top: 4px;
+	width: 181px;
+}
+
+* html .heading1 {
+	margin-bottom: 5px;
+}
+
+.heading2 {
+	background: url(../../images/heading-bg-2.gif) no-repeat;
+	color: #909090;
+	display: block;
+	font-family: arial, tahoma;
+	font-size: 14px;
+	font-weight: bold;
+	height: 21px;
+	margin-bottom: 5px;
+	padding-left: 38px;
+	padding-top: 4px;
+	width: 161px;
+}
+
+label{
+	color:black;
+	font-size:15px;
+	margin-left:50px;
+}
+fieldset{
+	margin-top:20px;
+	width:280px;
+	
+}
+
+
+#titreFichePerso{
+	color:black;
+	font-size:15px;
+	margin-left:50px;
+	margin-top:6px;
+	font-weight: bold;
+}
+#topRight{
+	background-color:white;
+	float: left;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	width: 465px;
+	height: 30px;
+	border-bottom:1px solid black;
+}
+#titleFormation{
+	color:black;
+	font-size:13px;
+	float:left;
+	font-weight:bold;
+}
+
+#statutsPersonnel{
+	color:black;
+	font-size:13px;
+	margin-left: 20px;
+	margin-top:20px;
+	font-weight: bold;
+}
+
+#contentFormation{
+	float: left;
+	height: 120px;
+	width: 340px;
+}
+#textRight{
+	color:black;
+	font-size:13px;
+	margin-left: 300px;
+	font-weight: bold;
+}
+#bottom{
+	height: 120px;
+	width: 340px;
+}
+
+table
+
+{
+
+    border-collapse: collapse;
+
+}
+
+td, th /* Mettre une bordure sur les td ET les th */
+
+{
+
+    border: 1px solid black;
+
+}
+
+#modif-perso{
+    background-color: white;
+    width: 250px;
+    position: absolute;
+    margin-top: -385px;
+    margin-left: 400px;
+}

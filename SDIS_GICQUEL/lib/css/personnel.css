@@ -1,0 +1,64 @@
+div#top{
+	height: 90px;
+	background-color: #222;
+	display: flex;	
+	border-bottom: 2px solid #aaa;
+}
+
+div#top img{
+	margin: auto 0 auto 35px;
+}
+div#top h1{
+	font-size: 250%;
+	margin: auto 0 auto 20px;
+}
+
+div#persoContent{
+	display: table;
+	width: 100%;
+	background-color: #555;
+	
+	padding-bottom: 20px;
+}
+
+div#persoContent div#persoContentChild{
+	display: table-cell;
+	width: 50%;
+}
+
+div#persoContent div#persoContentChild:last-child{
+	border-left: 1px solid #aaa;
+}
+
+div#persoContent h3, p{
+	padding: 0;
+	margin: 0;
+}
+
+div#persoContent h2{
+	font-size: 200%;
+}
+
+div#persoContent h3{
+	text-align: left;
+	font-size: 140%;
+}
+
+div#persoContent p{
+	font-size: 125%;
+}
+
+div#persoContent table #row1{
+	background-color: #ddd;
+}
+
+div#persoContent table #row2{
+	background-color: #bbb;
+}
+div#persoContent table td{	
+	font-size: 150%;
+}
+
+div#persoContent table td.fonction{	
+	color: black;
+}

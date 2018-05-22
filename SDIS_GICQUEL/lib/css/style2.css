@@ -1,0 +1,57 @@
+#imageCasque{
+	
+	text-align : center;
+	
+	
+}
+#boutons{
+	
+	text-align : center;
+	
+}
+
+#cadre{
+	
+	padding : auto;
+	margin : auto;
+}
+#titrefrm{
+	
+	background: url(../../images/footer-bg.gif) no-repeat;
+	clear: both;
+	color: #FFFFFF;
+	display: block;
+	
+}
+
+#error{
+	font-size: 150%;
+}
+
+fieldset{	
+	border-radius : 30px;
+	margin : auto;
+	padding : auto;
+	border-color : white;
+	
+}
+
+fieldset legend{
+	color : white;
+	font-size: 150%;
+	margin: 0 20px;
+	padding: 0 10px;
+}
+
+input[type=submit], input[type=button], input[type=reset]{
+	background-color: #BB0406;
+	color: white;
+	font-size: 150%;
+	padding: 8px 20px;
+    border: none;
+    border-radius: 4px;	
+    cursor: pointer;
+}
+input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover{
+	background-color: #e10404;
+}
