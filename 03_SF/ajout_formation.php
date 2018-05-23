@@ -9,21 +9,6 @@ if(empty($_SESSION['connectsf'])){
     
 }
 
-$matricule = $_GET['matriculeSP'];
-$infoSP="SELECT * FROM POMPIER WHERE SP_MATRICULE='$matricule'";
-
-$recupInfosSP = tableSQL($infoSP);
-
-foreach($recupInfosSP as $informationsSP){
-    $nom = $informationsSP['SP_NOM'];
-    $prenom = $informationsSP['SP_PRENOM'];
-    $datenaissance = $informationsSP['SP_DTE_NAISSANCE'];
-    $telfixe = $informationsSP['SP_TEL_FIXE'];
-    $telportable = $informationsSP['SP_TEL_PORTABLE'];
-    $sp_bip = $informationsSP['SP_BIP'];
-    $dateobtention = $informationsSP['DATE_AFFECTATION'];
-}
-
 
 ?>
 
@@ -32,7 +17,7 @@ foreach($recupInfosSP as $informationsSP){
 <head>
 <title>SDIS 29 - Catalogue / Consultation Fiche</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link href="../lib/css/style_fiche.css" rel="stylesheet" type="text/css" />
+<link href="../lib/css/style_ajout_formation.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="container">
@@ -50,75 +35,76 @@ foreach($recupInfosSP as $informationsSP){
  </div>
   <div id="content">
   <div id="left">
-		<label> Matricule :</label>
+  
+  		<p style="text-align:center;font-weight: bold;font-size: 19px;">Ajout d'une formation</p><br /><br />
+		<label> Identifiant :</label>
 		<br/>
 		<br/>
-		<label> Nom :</label>
+		<label> Intitul&eacute; :</label>
 		<br/>
 		<br/>
-		<label> Pr&eacute;nom :</label>
+		<label> Date de d&eacute;but :</label>
 		<br/>
 		<br/>
-		<label> Date de naissance :</label>
+		<label> Date de fin :</label>
 		<br/>
 		<br/>
-		<label> Profil :</label>
+		<label> Description :</label>
 		<br/>
 		<br/>
-		<label> Statut :</label>
+		<label> Capacit&eacute; :</label>
 		<br/>
 		<br/>
-		<label> Grade :</label>
+		<label> Ville :</label>
 		<br/>
 		<br/>
-		<label> Date d'obtention :</label>
 		<br/>
 		<br/>
-		<label> R&eacute;cepteur d'alerte :</label>
-		<br/>
-		<br/>
-		<label> T&eacute;l&eacute;phone fixe :</label>
-		<br/>
-		<br/>
-		<label> T&eacute;l&eacute;phone portable :</label>
+		<label> Fonction:</label>
 					<form id="modif-perso" name="modif-perso" method="post" >
 						<div class="leftdonnees">
-							<input id="matricule" name='matricule' type="text" value="<?php echo $matricule; ?>">
+							<input id="identifiant" name="identifiant" type="number" value="">
 							<br/>
 							<br/>
-							<input id="Nom" name="Nom" type="text" value="<?php echo $nom; ?>">
+							<input id="intitule" name="intitule" type="text" value="">
 							<br/>
 							<br/>
-							<input id="Prenom" name="Prenom" type="text" value="<?php echo $prenom; ?>">
+							<input id="date_debut" name="date_debut" type="date" value="">
 							<br/>
 							<br/>
-							<input id="dateNAISS" name="dateNAISS" type="date" value="<?php echo $datenaissance;?>">
+							<input id="date_fin" name="date_fin" type="date" value="">
 							<br/>
 							<br/>
-							<?php require 'liste_profil.php';?>
+							<input id="description" name='description' type="text" value="">
 							<br/>
 							<br/>
-							<?php require 'liste_statut.php';?>
+							<input id="capacite" name='capacite' type="number" value="">
 							<br/>
 							<br/>
-							<?php require 'liste_grade.php';?>
+							<input id="ville" name='ville' type="text" value="">
 							<br/>
 							<br/>
-							<input id="date" name="date" type="date" value="<?php echo $dateobtention;?>">
-							<br/>
-							<br/>
-							<?php echo $sp_bip; ?>
-							<br/>
-							<br/>
-							<input id="num_Fix" name="num_Fix" type="tel" value="<?php echo $telfixe; ?>">
-							<br/>
-							<br/>
-							<input id="num_Port" name="num_Port" type="tel" value="<?php echo $telportable;?>">
+							<?php 
+							
+							echo "<SELECT id=\"selectFonctions\" name=\"listeFonction\" style=\"margin-left:20px;margin-top: 20px;\" size=\"1\">";
+							
+							$sqlfonction = "SELECT * FROM FONCTION";
+							$resultfonction = tableSQL($sqlfonction);
+							
+							foreach ($resultfonction as $listeFonction) {
+							    
+							    $fct_libelle = $listeFonction['FCT_LIBELLE'];
+							    $fct_id = $listeFonction['FCT_ID'];
+							    echo "<option value=\"$fct_id\">$fct_libelle</option>";
+							}
+							echo "</SELECT>";
+							
+							?>
 						</div>
 						<div class="leftbutton">
 							<br/>
-							<button formaction="modif_perso_valider.php" type="submit" class="buton"><img src = "../images/ok.png"  width="32" height="32">Valider</button>
-							<button formaction="catalogue.php" type="submit" class="buton"><img src = "../images/cancel.png"  width="32" height="32">Annuler</button>
+							<button formaction="ajout_formation_valider.php" type="submit" class="buton"><img src = "../images/ok.png"  width="32" height="32">Valider</button>
+							<button formaction="formation_liste.php" type="submit" class="buton"><img src = "../images/cancel.png"  width="32" height="32">Annuler</button>
 						<br/><br/>
 						</div>
 					</form>

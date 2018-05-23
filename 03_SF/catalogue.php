@@ -44,7 +44,9 @@ $resultCS = tableSQL($sqlCASERNE);
       <li class="nlink"><a href="index.php">ACCUEIL</a></li>
       <li class="nlink"><a href="<?php echo"fiche_personnel.php?matricule=".$matricule ?>">PERSONNEL</a></li>
        <li class="nlink"><a href="#">CATALOGUE</a></li> 
-      <li class="nlink"><a href="validation.php">VALIDATION</a></li>                  
+      <li class="nlink"><a href="formation_liste.php">FORMATION</a></li>
+      <li class="nlink"><a href="validation.php">VALIDATION</a></li>   
+      <li class="nlink"><a href="../connect/disconnect.php">DECONNEXION</a></li>                 
     </ul>
  </div>
   <div id="content">
