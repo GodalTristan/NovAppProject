@@ -23,7 +23,7 @@ if(empty($_SESSION['connectcta'])){
   <div id="nav">
     <ul>
       <li class="nlink"><a href="index.php">ACCUEIL</a></li>
-      <li class="nlink"><a href="index.php">PERSONNEL</a></li>      
+      <li class="nlink"><a href="fiche_personnel.php">PERSONNEL</a></li>      
       <li class="nlink"><a href="../connect/disconnect.php">DECONNEXION</a></li>               
     </ul>
  </div>

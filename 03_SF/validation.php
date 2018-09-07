@@ -48,7 +48,8 @@ $sqlInscrit = "SELECT * FROM POMPIER INNER JOIN INSCRIRE ON POMPIER.SP_MATRICULE
       <li class="nlink"><a href="index.php">ACCUEIL</a></li>
       <li class="nlink"><a href="<?php echo"fiche_personnel.php?matricule=".$matricule ?>">PERSONNEL</a></li>
        <li class="nlink"><a href="index.php">CATALOGUE</a></li> 
-      <li class="nlink"><a href="#">VALIDATION</a></li>                  
+      <li class="nlink"><a href="#">VALIDATION</a></li>
+      <li class="nlink"><a href="../connect/disconnect.php">DECONNEXION</a></li>                     
     </ul>
  </div>
   <div id="content">
@@ -125,8 +126,14 @@ $sqlInscrit = "SELECT * FROM POMPIER INNER JOIN INSCRIRE ON POMPIER.SP_MATRICULE
       		<img src="../images/casque.png" style="max-width:6%; float:left;"></img>
     		<?php 
     		if(!empty($idFormation)){
+    		    $requeteP = "SELECT FOR_LIBELLE FROM FORMATION WHERE FOR_ID=".$idFormation.";";
+    		    $resultRequeteP = tableSQL($requeteP);
     		    
-    		    echo "<p id=\"titreFichePerso\">".$nomFormation." du ".$dateDFormation." au ".$dateFFormation."</p>";
+    		    foreach($resultRequeteP as $row){
+    		        $libelleForm = $row['FOR_LIBELLE'];
+    		    }
+    		    
+    		    echo "<p id=\"titreFichePerso\">".$libelleForm." du ".$dateDFormation." au ".$dateFFormation."</p>";
     		} else {
     		    
     		}

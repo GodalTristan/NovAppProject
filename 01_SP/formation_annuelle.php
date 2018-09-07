@@ -43,7 +43,8 @@ $resultFormation = tableSQL($infoFormationSQL);
     <ul>
       <li class="nlink"><a href="index.php">ACCUEIL</a></li>
       <li class="nlink"><a href="<?php echo"fiche_personnel.php?matricule=".$matricule ?>">PERSONNEL</a></li>
-      <li class="nlink"><a href="#">FORMATION</a></li>                      
+      <li class="nlink"><a href="#">FORMATION</a></li>        
+      <li class="nlink"><a href="../connect/disconnect.php">DECONNEXION</a></li>                 
     </ul>
  </div>
   <div id="content">

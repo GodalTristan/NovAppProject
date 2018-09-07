@@ -3,13 +3,13 @@ session_start();
 
 include '../lib/php/connectAD.php';
 
-if(empty($_SESSION['connectsapeur'])){
+if(empty($_SESSION['connectcta'])){
     echo "<meta http-equiv='refresh' content='0;url=../login.php?message=<font color=red>Veuillez vous connecter pour accèder à cette page.</font>'>";
 } else {
     
 }
 
-$username = $_SESSION['connectsapeur'];
+$username = $_SESSION['connectcta'];
 
 $sql="SELECT * FROM LOGIN WHERE LOG_LOGIN='$username'";
 
@@ -67,8 +67,7 @@ $resultfct = tableSQL($sqlfct);
     <ul>
       <li class="nlink"><a href="index.php">ACCUEIL</a></li>
       <li class="nlink"><a href="#">PERSONNEL</a></li>
-      <li class="nlink"><a href="formation_annuelle.php">FORMATION</a></li>     
-      <li class="nlink"><a href="../connect/disconnect.php">DECONNEXION</a></li>                    
+      <li class="nlink"><a href="../connect/disconnect.php">DECONNEXION</a></li>                   
     </ul>
  </div>
   <div id="content">
